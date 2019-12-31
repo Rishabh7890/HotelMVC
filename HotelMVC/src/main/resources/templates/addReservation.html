@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Edit Product</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+	rel="stylesheet">
+</head>
+<body>
+	<div align="center">
+		<div class="jumbotron jumbotron-fluid bg-secondary"
+			style="box-shadow: 0 0 10px black">
+			<h1 style="font-family: Montserrat;" class="display-4 text-light">Add
+				Reservation</h1>
+		</div>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${room}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td class="font-weight-bold" style="font-family: Roboto;">Room
+						Number:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{roomNumber}" readonly /></td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold" style="font-family: Roboto;">Bed
+						Type:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{bedType}" readonly /></td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold" style="font-family: Roboto;">Smoking:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{smoking}" readonly /></td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold" style="font-family: Roboto;">Room
+						Rate:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{roomRate}" readonly /></td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold" style="font-family: Roboto;">Name
+						Of Person Making Reservation:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{occupantName}" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="text-center" style="font-family: Roboto;"><button
+							type="submit" class="btn btn-outline-primary">Add
+							Reservation</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
